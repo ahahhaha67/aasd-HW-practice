@@ -50,5 +50,14 @@ int main()
     std::cout << *p << " ";
   std::cout << std::endl;
 
+  char carr[] = {'a', 'b', 'a', 'c', 'b', 'd'};
+  size_t cn = sizeof(carr) / sizeof(carr[0]);
+
+  char *cEnd = unique(carr, cn);
+  std::cout << "Unique chars: ";
+  for (char *p = carr; p != cEnd; ++p)
+    std::cout << *p << " ";
+  std::cout << std::endl;
+
   return 0;
 }
