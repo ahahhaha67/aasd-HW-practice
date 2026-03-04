@@ -41,5 +41,14 @@ int main()
     std::cout << *p << " ";
   std::cout << std::endl;
 
+  double darr[] = {1.1, 2.2, 1.1, 3.3, 2.2, 4.4};
+  size_t dn = sizeof(darr) / sizeof(darr[0]);
+
+  double *dEnd = unique(darr, dn);
+  std::cout << "Unique doubles: ";
+  for (double *p = darr; p != dEnd; ++p)
+    std::cout << *p << " ";
+  std::cout << std::endl;
+
   return 0;
 }
